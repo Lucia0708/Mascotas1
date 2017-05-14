@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="actionbar_name">Petagram     </string>
+    <string name="Rating">5</string>
+    <string name="acction_ver_favoritos">Ver favoritos</string>
+</resources>

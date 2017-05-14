@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lucia.mascotas.MainActivityListaMascotas">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <include android:id="@+id/miActionBar"
+            layout="@layout/actionbar"
+            ></include>
+
+    <ImageButton
+        android:id="@+id/ib_favoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/star_hotel_48"
+        app:layout_anchor="@id/miActionBar"
+        android:layout_alignParentRight="true"
+        android:elevation="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/rvMascotas" />
+
+        <!-- FAB -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="@dimen/size_fab"
+            android:layout_height="@dimen/size_fab"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/slr_large_lens_26"
+            app:elevation="@dimen/fab_elevation"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMascotas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:layout_below="@+id/miActionBar" />
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
